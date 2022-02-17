@@ -86,8 +86,33 @@ export const global = StyleSheet.create({
         paddingVertical: 20
     },
     image:{
-        flex: 1,
-        paddingVertical: 20,
-        paddingHorizontal: 10
+        flex: 1
+    },
+    imageTemperatura:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        height:300
+    },
+    headerControlador:{
+        paddingTop: 20,
+        paddingHorizontal: 10,
+        paddingBottom: 10
+    },
+    textoBlanco:{
+        color: "#fff"
+    },
+    containerControlador:{
+        backgroundColor:'#fff',
+        margin:22, 
+        borderRadius:20
+    },
+    botonPower:{
+        backgroundColor: '#2EF6AF',
+        paddingVertical: 8,
+        paddingHorizontal: 14,
+        borderRadius: 20,
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor: '#fff'
     }
 })
