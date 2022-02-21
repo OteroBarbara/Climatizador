@@ -11,7 +11,7 @@ const Controlador = ({navigation}) => {
      }
     return(
         <View style={{flex:1, backgroundColor:'#00C7C7'}}>
-            <View style={global.headerControlador}>
+            <View style={global.cajaHeaderControlador}>
                     <TouchableOpacity onPress={goToAjustes}>
                         <Ionicons name="options-outline" size={32} color="white" />
                     </TouchableOpacity>
@@ -24,7 +24,7 @@ const Controlador = ({navigation}) => {
             </View>
             <ImageBackground source={image} resizeMode="cover" style={global.image} imageStyle={{ borderTopRightRadius: 25, borderTopLeftRadius: 25}}>
                 <View style={global.containerControlador}>
-                    <View style={{backgroundColor:'#B7B5B5', justifyContent:'center', alignItems:'center',borderTopRightRadius: 25, borderTopLeftRadius: 25}}>
+                    <View style={{backgroundColor:'#B7B5B5', justifyContent:'center', alignItems:'center',borderTopRightRadius: 25, borderTopLeftRadius: 25}}>                
                         <H2>Climatizador</H2>
                     </View>
                     <ImageBackground source={require('../assets/img-temperatura.png')} resizeMode="contain" style={global.imageTemperatura}>

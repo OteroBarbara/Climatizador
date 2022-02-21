@@ -93,7 +93,7 @@ export const global = StyleSheet.create({
         alignItems: 'center',
         height:300
     },
-    headerControlador:{
+    cajaHeaderControlador:{
         paddingTop: 20,
         paddingHorizontal: 10,
         paddingBottom: 10
@@ -114,5 +114,17 @@ export const global = StyleSheet.create({
         borderStyle: 'solid',
         borderWidth: 1,
         borderColor: '#fff'
-    }
+    },
+    headerControlador:{
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'space-around', 
+        alignItems:'center'
+    },
+    cajaTemperaturaControlador:{
+        backgroundColor:'#B7B5B5',
+        justifyContent:'center', 
+        alignItems:'center',
+        borderTopRightRadius: 25, 
+        borderTopLeftRadius: 25}
 })
