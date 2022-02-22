@@ -91,7 +91,7 @@ export const global = StyleSheet.create({
     imageTemperatura:{
         justifyContent: 'center',
         alignItems: 'center',
-        height:300
+        minHeight:250
     },
     cajaHeaderControlador:{
         paddingTop: 20,
@@ -103,17 +103,27 @@ export const global = StyleSheet.create({
     },
     containerControlador:{
         backgroundColor:'#fff',
-        margin:22, 
-        borderRadius:20
+        marginTop:22, 
+        marginHorizontal:22, 
+        borderRadius:20,
     },
-    botonPower:{
-        backgroundColor: '#2EF6AF',
+    botonPowerOn:{
         paddingVertical: 8,
         paddingHorizontal: 14,
         borderRadius: 20,
         borderStyle: 'solid',
         borderWidth: 1,
-        borderColor: '#fff'
+        borderColor: '#fff',
+        backgroundColor: '#2EF6AF'
+    },
+    botonPowerOff:{
+        paddingVertical: 8,
+        paddingHorizontal: 14,
+        borderRadius: 20,
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor: '#fff',
+        backgroundColor: 'red'
     },
     headerControlador:{
         display:'flex',
@@ -125,6 +135,13 @@ export const global = StyleSheet.create({
         backgroundColor:'#B7B5B5',
         justifyContent:'center', 
         alignItems:'center',
-        borderTopRightRadius: 25, 
-        borderTopLeftRadius: 25}
+        borderTopRightRadius: 20, 
+        borderTopLeftRadius: 20
+    },
+    cajaBotonesModo:{
+        backgroundColor:'#B7B5B5', 
+        display: 'flex', 
+        flexDirection: 'row', 
+        alignSelf: 'stretch'
+    }
 })
