@@ -3,12 +3,22 @@ import { View, TouchableOpacity, ImageBackground, Text} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import { global } from "../styles/global";
 import { H1, H2 } from '@expo/html-elements';
+import { Provider } from 'react-redux';
+import store from "../store/store";
+import Temperatura from "../components/Temperatura";
 
 const ControladorOnNocturno = ({navigation}) => {
     const image = require('../assets/fondo-controlador.png') ;
     const goToAjustes = ()=>{
         navigation.push("Ajustes");
      }
+     const subirT= ()=>{
+        this.temperatura++;
+     }
+     const bajarT = ()=>{
+        this.temperatura--;
+     }
+     let temperatura = 0;
     return(
         <View style={{flex:1, backgroundColor:'#00C7C7'}}>
             <View style={global.cajaHeaderControlador}>
@@ -48,6 +58,11 @@ const ControladorOnNocturno = ({navigation}) => {
                             <H1>15º</H1>
                         </View>
                     </ImageBackground>
+
+                    <Provider store={store}>
+                        <Temperatura></Temperatura>
+                    </Provider>
+                    <Text>Bomba ON</Text>
                 </View>
                 <View style={global.containerControlador}>
                     <View style={{paddingHorizontal:20}}>
@@ -72,6 +87,7 @@ const ControladorOnNocturno = ({navigation}) => {
                             <Text style={{color:'#B7B5B5'}}>Automático</Text>
                         </TouchableOpacity>
                     </View>
+                    <Text>Las luces se apagan automáticamente de noche.</Text>
                 </View>
             </ImageBackground>
         </View>

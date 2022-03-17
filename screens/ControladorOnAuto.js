@@ -3,6 +3,10 @@ import { View, TouchableOpacity, ImageBackground, Text} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import { global } from "../styles/global";
 import { H1, H2 } from '@expo/html-elements';
+import { Provider } from 'react-redux';
+import store from './store/store';
+import Temperatura from "../components/Temperatura";
+import Horas from "../components/Horas";
 
 const ControladorOnAuto = ({navigation}) => {
     const image = require('../assets/fondo-controlador.png') ;
@@ -48,12 +52,19 @@ const ControladorOnAuto = ({navigation}) => {
                             <H1>15º</H1>
                         </View>
                     </ImageBackground>
+                    <Provider store={store}>
+                        <Temperatura></Temperatura>
+                    </Provider>
+                    <Text>Bomba ON</Text>
                 </View>
                 <View style={global.containerControlador}>
                     <View style={{paddingHorizontal:20}}>
                         <H2>Luces</H2>
                     </View>
                 </View>
+                <Provider store={store}>
+                    <Horas></Horas>
+                </Provider>
             </ImageBackground>
         </View>
     )

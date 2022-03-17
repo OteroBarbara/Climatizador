@@ -3,6 +3,8 @@ import { View, TouchableOpacity, ImageBackground, Text} from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import { global } from "../styles/global";
 import { H1, H2 } from '@expo/html-elements';
+import Temperatura from "../components/Temperatura";
+import Horas from "../components/Horas";
 
 const ControladorOn = ({navigation}) => {
     const image = require('../assets/fondo-controlador.png') ;
@@ -27,7 +29,7 @@ const ControladorOn = ({navigation}) => {
             <ImageBackground source={image} resizeMode="cover" style={global.image} imageStyle={{ borderTopRightRadius: 25, borderTopLeftRadius: 25}}>
                 <View style={global.containerControlador}>
                     <View style={global.cajaTemperaturaControlador}>                
-                        <H2>Climatizador</H2>
+                        <H2 style={global.tituloClimatizador}>Climatizador</H2>
                         <View style={global.cajaBotonesModo}>                
                             <TouchableOpacity 
                             style={{backgroundColor:'#B7B5B5',borderBottomRightRadius: 10, flex: 1, justifyContent: 'center', alignItems: 'center', marginBottom: -10, paddingVertical:10}}
@@ -48,6 +50,8 @@ const ControladorOn = ({navigation}) => {
                             <H1>15º</H1>
                         </View>
                     </ImageBackground>
+                    <Temperatura></Temperatura>
+                    <Text>Bomba ON</Text>
                 </View>
                 <View style={global.containerControlador}>
                     <View style={{paddingHorizontal:20}}>
@@ -72,6 +76,7 @@ const ControladorOn = ({navigation}) => {
                             <Text>Automático</Text>
                         </TouchableOpacity>
                     </View>
+                    <Horas></Horas>
                 </View>
             </ImageBackground>
         </View>
