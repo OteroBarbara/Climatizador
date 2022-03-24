@@ -6,7 +6,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import { ctrlChange } from "../store/action";
 import { H1 } from "@expo/html-elements";
 
-const Header = () => {
+const Header = ({navigation}) => {
     const on = useSelector(state => state.on);
     const dispatch= useDispatch();
     const goToAjustes = ()=>{

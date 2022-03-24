@@ -6,12 +6,12 @@ import Modo from "../components/Modo";
 import Luces from "../components/Luces";
 import Header from "../components/Header";
 
-const Controlador = () => {
+const Controlador = ({navigation}) => {
     const on = useSelector(state => state.on);
     if(on){
         return(
             <View style={{flex:1, backgroundColor:'#00C7C7'}}>
-                <Header></Header>
+                <Header navigation={navigation}></Header>
                 <ImageBackground source={require('../assets/fondo-controlador.png')} resizeMode="cover" style={global.image} imageStyle={{ borderTopRightRadius: 25, borderTopLeftRadius: 25}}>
                     <Modo></Modo>
                     <Luces></Luces>
