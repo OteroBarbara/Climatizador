@@ -3,6 +3,10 @@ import { View, TouchableOpacity} from "react-native";
 import { H1 } from '@expo/html-elements';
 import { global } from "../styles/global";
 import { Ionicons } from '@expo/vector-icons';
+import Cal1 from "../components/Cal1";
+import Cal2 from "../components/Cal2";
+import Dif from "../components/Dif";
+import Set from "../components/Set";
 
 const Configuracion = ({navigation}) => {
     const goBack = ()=>{
@@ -18,6 +22,10 @@ const Configuracion = ({navigation}) => {
                     Configuración
                 </H1>
             </View>
+            <Cal1></Cal1>
+            <Cal2></Cal2>
+            <Dif></Dif>
+            <Set></Set>
         </View>
     )
 }

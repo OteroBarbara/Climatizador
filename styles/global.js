@@ -163,5 +163,23 @@ export const global = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-evenly'
+    },
+    cajaBtnConfig:{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        backgroundColor: '#F6F6F6',
+        borderRadius: 25,
+        paddingVertical: 20,
+        paddingHorizontal: 40,
+        alignItems: 'center',
+        margin: 10
+    },
+    btnConfig:{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: 120
     }
 })
