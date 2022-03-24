@@ -2,7 +2,7 @@ import React from "react";
 import { View, TouchableOpacity, Text} from "react-native";
 import { global } from "../styles/global";
 import { AntDesign } from '@expo/vector-icons';
-import {useSelector, useDispatch} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux';
 import { incrementT, decrementT } from "../store/action";
 
 const Temperatura = () => {

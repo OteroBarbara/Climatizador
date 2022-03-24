@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import ControladorOn from '../screens/ControladorOn';
-import ControladorOff from '../screens/ControladorOff';
+import Controlador from '../screens/Controlador';
 import ControladorOnManual from '../screens/ControladorOnManual';
 import ControladorOnLucesOn from '../screens/ControladorOnLucesOn';
 import ControladorOnNocturno from '../screens/ControladorOnNocturno';
@@ -13,12 +12,7 @@ function CtrlTab() {
         screenOptions={{
             tabBarActiveTintColor: '#e91e63',
         }}>
-            <Tab.Screen name="On" component={ControladorOn} 
-            options={{
-                headerShown: false,
-                tabBarStyle: { display: 'none' }
-            }}/>
-            <Tab.Screen name="Off" component={ControladorOff} 
+            <Tab.Screen name="On" component={Controlador} 
             options={{
                 headerShown: false,
                 tabBarStyle: { display: 'none' }

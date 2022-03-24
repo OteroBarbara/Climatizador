@@ -69,3 +69,23 @@ export const decrementS= ()=>{
         type: 'DECREMENT_S'
     }
 }
+
+export const ctrlChange= ()=>{
+    return{
+        type: 'CTRL_CHANGE'
+    }
+}
+
+export const modoChange= ()=>{
+    return{
+        type: 'MODO_CHANGE'
+    }
+}
+
+export const lucesChange= (num)=>{
+    return{
+        type: 'LUCES_CHANGE',
+        payload: num
+    }
+}
+
